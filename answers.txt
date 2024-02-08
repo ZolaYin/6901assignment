@@ -114,3 +114,13 @@ cut -f1 Year_Mag_Country.tsv | sort | uniq -c | sort -nr | head -n10
      59 2011
 
 # 12. Turn in your homework by sharing it with us on a GitHub repository. Use your repository from Assignment 0. Share this repository with users graheja  and dmw2166. Clone the repository to your laptop. Save your answers to the exercises above in a text file called answers.txt. Use git to commit answers.txt to your repository on your laptop, and then push the changes to the remote repository on GitHub.
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa_git2
+git clone git@github.com:ZolaYin/6901assignment.git
+cd 6901assignment
+git config --global user.email "qy2307@columbia.edu"
+git config --global user.name "ZolaYin"
+git add answers.txt
+git commit -m "Added answers"
+git push
